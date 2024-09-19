@@ -18,7 +18,7 @@
         /* Navigation Bar */
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start; /* Aligns all items to the left */
             align-items: center;
             background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
             padding: 0.5rem 1rem;
@@ -28,18 +28,15 @@
             z-index: 1000;
         }
 
-        /* Logo (Text Only) */
-        .logo a {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
+        /* Logo */
+        .logo {
+            margin-right: 2rem; /* Add some space between the logo and the menu */
         }
 
         /* Menu Items */
         .menu {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Aligns menu items to the left */
             align-items: center;
         }
 
@@ -49,17 +46,18 @@
             font-weight: 600;
             font-size: 1rem; /* Keeping original font size */
             text-transform: uppercase;
-            margin: 0 0.5rem; /* Reduced margin */
+            margin: 0 0.5rem; /* Reduced margin between items */
             transition: color 0.3s;
         }
 
         /* Smaller separator dots between menu items */
         .menu a:not(:last-child)::after {
             content: " · ";
-            font-size: 0.75rem; /* Smaller dots */
+            font-size: 0.75rem; /* Reduced size of the dot */
             color: #fff;
-            margin-left: 0.5rem; /* Reduced space after the dot */
+            margin-left: 0.5rem; /* Smaller space between the dot and text */
         }
+
 
         /* Full-Screen Background Section */
         .intro {
