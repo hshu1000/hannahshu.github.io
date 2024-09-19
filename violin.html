@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah Shu's Personal Website</title>
+    <title>Hannah Shu's Violin Performances</title>
     <style>
         /* Base Styles */
         body {
@@ -75,6 +75,21 @@
             color: #2E3440;
         }
 
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 400px;
+            height: 225px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         /* Footer */
         footer {
             background-color: #4C566A;
@@ -98,33 +113,36 @@
                 display: block;
                 margin: 0.5rem 0;
             }
+
+            .video-container iframe {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Hannah Shu</h1>
-        <p>Welcome to my personal website</p>
+        <h1>Hannah Shu's Violin Performances</h1>
+        <p>Experience the beauty of music</p>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
+        <a href="home.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="photography.html">Photography</a>
-        <a href="violin.html">Violin Performances</a>
-        <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm Hannah Shu, a Computer Science and Data Science major at Stanford University. I'm passionate about AI/ML, data analysis, and exploring how technology can be applied to social issues. I love working on projects that challenge me and allow me to learn and grow.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out via email: <a href="mailto:hannahshu@example.com">hannahshu@example.com</a></p>
+        <section>
+            <h2>My Performances</h2>
+            <p>Playing the violin has been a passion of mine for many years. Here are some of my favorite performances.</p>
+            <div class="video-container">
+                <!-- Example embedded YouTube videos -->
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
     </div>
 
