@@ -1,216 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah Shu's Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Base Styles */
-        body, html {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            height: 100%;
-        }
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 0.5rem 1rem; /* Same padding as before */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            padding: 0.5rem 1rem; /* Reduced padding */
-            position: absolute;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+/* Menu Items */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        /* Logo (Text Only) */
-        .logo a {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem; /* Keeping the original font size */
+    text-transform: uppercase;
+    margin: 0 0.5rem; /* Reduced margin between items */
+    transition: color 0.3s;
+}
 
-        /* Menu Items */
-        .menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .menu a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem; /* Reduced font size */
-            text-transform: uppercase;
-            margin: 0 1rem; /* Reduced margin */
-            transition: color 0.3s;
-        }
-
-        /* Adding separator between menu items */
-        .menu a:not(:last-child)::after {
-            content: " · ";
-            color: #fff;
-            margin-left: 1rem; /* Reduced separator margin */
-        }
-
-        /* Full-Screen Background Section */
-        .intro {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url('images/hannah.JPG'); /* Background image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Dark overlay for better text visibility */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-            z-index: 2;
-        }
-
-        /* Text in Intro Section */
-        .intro-content {
-            z-index: 3; /* On top of overlay */
-            color: white;
-        }
-
-        .intro-content h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin: 0;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .intro-content p {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            font-weight: 300;
-        }
-
-        .intro-content .divider {
-            width: 100px;
-            height: 4px;
-            background-color: #FFDD00; /* Yellow divider */
-            margin: 1rem auto;
-        }
-
-        /* Social Media Icons Section */
-        .social-media-section {
-            background-color: transparent;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .social-media-section .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .social-media-section .social-media a {
-            margin: 0 15px;
-            color: white;
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            text-align: center;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .social-media-section .social-media a.instagram { background-color: #E1306C; }
-        .social-media-section .social-media a.youtube { background-color: #FF0000; }
-        .social-media-section .social-media a.email { background-color: #4d4d4d; }
-        .social-media-section .social-media a.linkedin { background-color: #0077B5; }
-        .social-media-section .social-media a.github { background-color: #333; }
-
-        .social-media-section .social-media a:hover {
-            opacity: 0.8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .intro-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .intro-content p {
-                font-size: 1.2rem;
-            }
-
-            .social-media-section .social-media a {
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 1.2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <!-- Logo (Text Only) -->
-        <div class="logo">
-            <a href="home.html">HANNAH SHU</a>
-        </div>
-
-        <!-- Menu -->
-        <div class="menu">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="research.html">Research</a>
-            <a href="photography.html">Photography</a>
-            <a href="violin.html">Violin</a>
-        </div>
-    </nav>
-
-    <!-- Intro Section with Full-Screen Background Image -->
-    <section class="intro">
-        <!-- Overlay for dark effect -->
-        <div class="overlay"></div>
-
-        <!-- Intro Content (Text and Divider) -->
-        <div class="intro-content">
-            <h1>HANNAH SHU</h1>
-            <div class="divider"></div>
-            <p>Monterey || Stanford</p>
-        </div>
-    </section>
-
-    <!-- Social Media Icons Section -->
-    <section class="social-media-section">
-        <div class="social-media">
-            <a href="https://www.instagram.com/hannahhshu/" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@hannahshu6734" class="youtube"><i class="fab fa-youtube"></i></a>
-            <a href="mailto:hshu100@stanford.edu" class="email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/hannah-shu/" class="linkedin"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/hshu1000" class="github"><i class="fab fa-github"></i></a> <!-- GitHub Link -->
-        </div>
-    </section>
-
-</body>
-</html>
+/* Smaller separator dots between menu items */
+.menu a:not(:last-child)::after {
+    content: " · ";
+    font-size: 0.75rem; /* Reduced size of the dot */
+    color: #fff;
+    margin-left: 0.5rem; /* Smaller space between the dot and text */
+}
