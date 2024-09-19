@@ -8,133 +8,139 @@
         /* Base Styles */
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f0f3f5;
             color: #333;
         }
 
-        /* Container Styles */
-        .intro-container {
+        /* Navigation Bar */
+        nav {
             display: flex;
+            justify-content: center;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 1.5rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* Main Intro Section */
+        .intro {
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 2rem;
+            padding: 4rem 2rem;
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Text Section */
-        .intro-text {
-            flex: 1;
-            padding-right: 2rem;
+        .intro img {
+            width: 300px;
+            border-radius: 15px;
+            margin-bottom: 2rem;
         }
 
-        .intro-text h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+        .intro h1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            color: #333;
+            font-family: 'Georgia', serif;
         }
 
-        .intro-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        .intro-text p {
+        .intro p {
             font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Image Section */
-        .intro-image {
-            flex: 1;
-        }
-
-        .intro-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Button Styles */
-        .intro-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .intro-buttons a {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
             text-align: center;
-            transition: background-color 0.3s ease;
+            max-width: 600px;
+            color: #666;
+            margin-bottom: 2rem;
         }
 
-        .intro-buttons a.book-btn {
-            background-color: #4CAF50;
-            color: white;
+        /* Welcome Message Section */
+        .welcome-section {
+            background-color: #EDF2F7;
+            padding: 3rem 1rem;
+            text-align: center;
         }
 
-        .intro-buttons a.book-btn:hover {
-            background-color: #45a049;
-        }
-
-        .intro-buttons a.ask-btn {
-            background-color: #e7e7e7;
+        .welcome-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Georgia', serif;
             color: #333;
         }
 
-        .intro-buttons a.ask-btn:hover {
-            background-color: #ddd;
+        .welcome-section p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .intro-container {
-                flex-direction: column;
-                padding: 1rem;
+            .intro img {
+                width: 100%;
             }
 
-            .intro-text {
-                padding-right: 0;
-                margin-bottom: 1.5rem;
-            }
-
-            .intro-text h1 {
+            .intro h1 {
                 font-size: 2rem;
             }
 
-            .intro-text h3 {
-                font-size: 1.2rem;
+            .intro p {
+                font-size: 1rem;
+            }
+
+            .welcome-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .welcome-section p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="intro-container">
-        <div class="intro-text">
-            <h1>Hannah Shu</h1>
-            <h3>Data Scientist | Developer</h3>
-            <p>Hi, I'm Hannah Shu, a passionate Computer Science and Data Science major at Stanford University. I specialize in AI, machine learning, and data analysis, exploring how technology can tackle social issues. I'm always excited to work on new projects and share knowledge.</p>
-            <div class="intro-buttons">
-                <a href="#" class="book-btn">Book me</a>
-                <a href="#" class="ask-btn">Ask me a question</a>
-            </div>
-        </div>
-        <div class="intro-image">
-            <img src="images/hannah.JPG" alt="Hannah Shu">
-        </div>
-    </div>
+    <!-- Navigation -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="videos.html">Videos</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <img src="images/hannah.jpg" alt="Hannah Shu">
+        <h1>Welcome!</h1>
+        <p>This is a place for people who love technology, enjoy learning new things, and seek to make an impact through innovation. Feel free to explore my work and projects and get inspired to embark on your own journey.</p>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h2>Welcome!</h2>
+        <p>This website is for those who love exploring AI, machine learning, and data analysis while finding creative solutions to real-world problems. Feel free to browse through my projects, tutorials, and research for daily inspiration in the field of technology.</p>
+    </section>
 
 </body>
 </html>
