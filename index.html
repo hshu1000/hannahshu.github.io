@@ -21,14 +21,14 @@
             justify-content: space-between;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            padding: 1rem 2rem;
+            padding: 0.5rem 1rem; /* Reduced padding */
             position: absolute;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
 
-        /* Logo on the left - Text only */
+        /* Logo (Text Only) */
         .logo a {
             color: white;
             font-size: 1.5rem;
@@ -47,21 +47,17 @@
             color: #fff;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem; /* Reduced font size */
             text-transform: uppercase;
-            margin: 0 1.5rem;
+            margin: 0 1rem; /* Reduced margin */
             transition: color 0.3s;
-        }
-
-        .menu a:hover {
-            color: #FFDD00; /* Yellow hover color */
         }
 
         /* Adding separator between menu items */
         .menu a:not(:last-child)::after {
             content: " · ";
             color: #fff;
-            margin-left: 1.5rem;
+            margin-left: 1rem; /* Reduced separator margin */
         }
 
         /* Full-Screen Background Section */
@@ -148,7 +144,7 @@
         .social-media-section .social-media a.youtube { background-color: #FF0000; }
         .social-media-section .social-media a.email { background-color: #4d4d4d; }
         .social-media-section .social-media a.linkedin { background-color: #0077B5; }
-        .social-media-section .social-media a.github { background-color: #333; } /* Updated GitHub Icon */
+        .social-media-section .social-media a.github { background-color: #333; }
 
         .social-media-section .social-media a:hover {
             opacity: 0.8;
