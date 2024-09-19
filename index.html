@@ -10,7 +10,6 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f3f5;
             color: #333;
         }
 
@@ -40,35 +39,34 @@
             color: #4CAF50;
         }
 
-        /* Main Intro Section */
+        /* Full-Screen Intro Section */
         .intro {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 4rem 2rem;
-            background-color: white;
-        }
-
-        .intro img {
-            width: 300px;
-            border-radius: 15px;
-            margin-bottom: 2rem;
+            height: 100vh; /* Full screen height */
+            background-image: url('images/hannah.JPG'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            padding: 2rem;
         }
 
         .intro h1 {
-            font-size: 2.5rem;
-            margin: 1rem 0;
-            color: #333;
+            font-size: 3rem;
+            margin: 0;
             font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
         }
 
         .intro p {
             font-size: 1.2rem;
-            text-align: center;
-            max-width: 600px;
-            color: #666;
-            margin-bottom: 2rem;
+            max-width: 700px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+            margin-top: 1.5rem;
         }
 
         /* Welcome Message Section */
@@ -94,12 +92,8 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .intro img {
-                width: 100%;
-            }
-
             .intro h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .intro p {
@@ -129,9 +123,8 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- Intro Section -->
+    <!-- Intro Section with Full-Screen Image -->
     <section class="intro">
-        <img src="images/hannah.JPG" alt="Hannah Shu">
         <h1>Welcome!</h1>
         <p>This is a place for people who love technology, enjoy learning new things, and seek to make an impact through innovation. Feel free to explore my work and projects and get inspired to embark on your own journey.</p>
     </section>
