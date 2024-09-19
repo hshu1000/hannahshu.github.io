@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah Shu's Personal Website</title>
+    <title>Hannah Shu's Photography</title>
     <style>
         /* Base Styles */
         body {
@@ -75,6 +75,19 @@
             color: #2E3440;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         /* Footer */
         footer {
             background-color: #4C566A;
@@ -104,26 +117,26 @@
 <body>
 
     <header>
-        <h1>Hannah Shu</h1>
-        <p>Welcome to my personal website</p>
+        <h1>Hannah Shu's Photography</h1>
+        <p>Explore my passion for photography</p>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
+        <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="photography.html">Photography</a>
-        <a href="#contact">Contact</a>
     </nav>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm Hannah Shu, a Computer Science and Data Science major at Stanford University. I'm passionate about AI/ML, data analysis, and exploring how technology can be applied to social issues. I love working on projects that challenge me and allow me to learn and grow.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out via email: <a href="mailto:hannahshu@example.com">hannahshu@example.com</a></p>
+        <section>
+            <h2>Photography Gallery</h2>
+            <div class="gallery">
+                <img src="images/photo1.jpg" alt="Photo 1">
+                <img src="images/photo2.jpg" alt="Photo 2">
+                <img src="images/photo3.jpg" alt="Photo 3">
+                <img src="images/photo4.jpg" alt="Photo 4">
+            </div>
+            <p>I love capturing moments that tell a story, whether it's through nature, cityscapes, or candid portraits. Here are some of my favorite shots.</p>
         </section>
     </div>
 
