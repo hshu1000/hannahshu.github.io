@@ -12,12 +12,53 @@
             padding: 0;
             font-family: 'Arial', sans-serif;
             height: 100%;
-            color: white;
+            color: black;
             scroll-behavior: smooth;
-            text-align: center;
         }
 
-        /* Full-Screen Background Section */
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd; /* Subtle bottom border */
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Navigation Menu */
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: grey;
+        }
+
+        /* Intro Section */
         .intro {
             display: flex;
             flex-direction: column;
@@ -30,6 +71,7 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
+            padding-top: 4rem; /* To avoid overlap with the fixed header */
         }
 
         /* Dark overlay */
@@ -48,6 +90,7 @@
             z-index: 2;
             position: relative;
             color: white;
+            text-align: center;
         }
 
         .intro-content h1 {
@@ -61,34 +104,19 @@
             margin: 0.5rem 0;
         }
 
-        .intro-content .enter-btn {
-            margin-top: 1rem;
-            padding: 0.5rem 2rem;
-            font-size: 1rem;
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .intro-content .enter-btn:hover {
-            background-color: white;
-            color: black;
-        }
-
         /* Social Media Icons */
         .social-media {
-            margin-top: 1.5rem;
+            position: absolute;
+            bottom: 20px;
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 2rem;
+            z-index: 2;
         }
 
         .social-media a {
             color: white;
-            font-size: 1.2rem;
+            font-size: 2rem; /* Larger size for social media icons */
             transition: color 0.3s ease;
         }
 
@@ -119,24 +147,34 @@
 </head>
 <body>
 
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Hannah Shu</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#instagram">Instagram</a>
+        </div>
+    </nav>
+
     <!-- Intro Section with Full-Screen Background Image -->
-    <section class="intro">
+    <section class="intro" id="home">
         <div class="overlay"></div>
 
         <!-- Intro Content -->
         <div class="intro-content">
             <h1>HANNAH SHU</h1>
             <p>Monterey | Stanford</p>
-            <button class="enter-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Enter</button>
+        </div>
 
-            <!-- Social Media Icons -->
-            <div class="social-media">
-                <a href="https://www.instagram.com/hannahhshu/" class="instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@hannahshu6734" class="youtube"><i class="fab fa-youtube"></i></a>
-                <a href="mailto:hshu100@stanford.edu" class="email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/hannah-shu/" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/hshu1000" class="github"><i class="fab fa-github"></i></a>
-            </div>
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/hannahhshu/" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@hannahshu6734" class="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:hshu100@stanford.edu" class="email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/hannah-shu/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/hshu1000" class="github"><i class="fab fa-github"></i></a>
         </div>
     </section>
 
