@@ -57,12 +57,13 @@
         .menu a:hover {
             color: grey;
         }
+
         /* Intro Section */
         .intro {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align content to the top */
-            align-items: center;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
             height: 100vh;
             width: 100vw;
             background-image: url('images/hannah1.jpg'); /* Your background image */
@@ -70,7 +71,6 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
-            padding-top: 6rem; /* Adjust this value to move text closer to the top */
         }
 
         /* Dark overlay */
@@ -86,11 +86,10 @@
 
         /* Content on top of overlay */
         .intro-content {
-            z-index: 2;   
+            z-index: 2;
             position: relative;
             color: white;
             text-align: center;
-            margin-top: 2rem; /* Adjust this value to move text upwards */
         }
 
         .intro-content h1 {
@@ -104,24 +103,30 @@
             margin: 0.5rem 0;
         }
 
-        /* Social Media Icons */
-        .social-media {
-            position: absolute;
-            bottom: 20px;
+        /* Social Media Bottom Bar */
+        .social-media-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            z-index: 2;
+            align-items: center;
+            padding: 1rem 0;
+            z-index: 1000;
+            border-top: 1px solid #ddd;
         }
 
-        .social-media a {
-            color: white;
+        .social-media-bar a {
+            color: black; /* Make icons black */
             font-size: 2rem; /* Larger size for social media icons */
+            margin: 0 1rem;
             transition: color 0.3s ease;
         }
 
-        .social-media a:hover {
-            color: #FFDD00; /* Highlight on hover */
+        .social-media-bar a:hover {
+            color: grey; /* Change color on hover */
         }
 
         /* About Section */
@@ -167,16 +172,16 @@
             <h1>HANNAH SHU</h1>
             <p>Monterey || Stanford</p>
         </div>
-
-        <!-- Social Media Icons -->
-        <div class="social-media">
-            <a href="https://www.instagram.com/hannahhshu/" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@hannahshu6734" class="youtube"><i class="fab fa-youtube"></i></a>
-            <a href="mailto:hshu100@stanford.edu" class="email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/hannah-shu/" class="linkedin"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/hshu1000" class="github"><i class="fab fa-github"></i></a>
-        </div>
     </section>
+
+    <!-- Social Media Bottom Bar -->
+    <div class="social-media-bar">
+        <a href="https://www.instagram.com/hannahhshu/" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@hannahshu6734" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:hshu100@stanford.edu" class="email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/hannah-shu/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/hshu1000" class="github"><i class="fab fa-github"></i></a>
+    </div>
 
     <!-- About Section -->
     <section id="about">
