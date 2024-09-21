@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah Shu's Personal Website</title>
+    <title>Hannah T. Shu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Base Styles */
@@ -57,12 +57,11 @@
         .menu a:hover {
             color: grey;
         }
-
         /* Intro Section */
         .intro {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Align content to the top */
             align-items: center;
             height: 100vh;
             width: 100vw;
@@ -71,7 +70,7 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
-            padding-top: 4rem; /* To avoid overlap with the fixed header */
+            padding-top: 6rem; /* Adjust this value to move text closer to the top */
         }
 
         /* Dark overlay */
@@ -87,10 +86,11 @@
 
         /* Content on top of overlay */
         .intro-content {
-            z-index: 2;
+            z-index: 2;   
             position: relative;
             color: white;
             text-align: center;
+            margin-top: 2rem; /* Adjust this value to move text upwards */
         }
 
         .intro-content h1 {
