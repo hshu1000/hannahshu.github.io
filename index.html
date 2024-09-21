@@ -136,16 +136,79 @@
             color: black;
         }
 
-        #about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .about-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        #about p {
+        .profile-picture {
+            flex: 1;
+            margin-right: 2rem;
+            text-align: center;
+        }
+
+        .profile-picture img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about-details {
+            flex: 2;
+        }
+
+        .about-details h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-details h3 {
             font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: grey;
+        }
+
+        .about-details p {
+            font-size: 1rem;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Interests and Education Section */
+        .interests-education {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .interests, .education {
+            flex: 1;
+            margin-right: 2rem;
+        }
+
+        .interests ul, .education ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .interests ul li, .education ul li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .education ul li i {
+            margin-right: 0.5rem;
         }
 
     </style>
@@ -185,10 +248,44 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Hannah Shu</h2>
-        <p>
-            Hannah Shu is a passionate student at Stanford University, majoring in Computer Science and Data Science. With a deep interest in AI, data analysis, and interdisciplinary projects, she aims to make a meaningful impact through her work. Hannah enjoys solving complex challenges, collaborating with like-minded individuals, and contributing to education equality.
-        </p>
+        <div class="about-container">
+            <!-- Profile Picture -->
+            <div class="profile-picture">
+                <img src="images/profile.jpg" alt="Hannah Shu">
+            </div>
+
+            <!-- About Details -->
+            <div class="about-details">
+                <h2>Hannah Shu</h2>
+                <h3>Stanford University | Computer Science & Data Science</h3>
+                <p>
+                    I am a passionate student at Stanford University, majoring in Computer Science and Data Science. My interests lie at the intersection of AI, data analysis, and interdisciplinary projects. I am dedicated to making a meaningful impact through my work, solving complex challenges, and contributing to education equality. In my free time, I enjoy exploring new technologies and collaborating with like-minded individuals.
+                </p>
+
+                <!-- Interests and Education Sections -->
+                <div class="interests-education">
+                    <!-- Interests Section -->
+                    <div class="interests">
+                        <h3 class="section-title">Interests</h3>
+                        <ul>
+                            <li>AI and Machine Learning</li>
+                            <li>Data Science</li>
+                            <li>Signal Processing</li>
+                            <li>Education Equality</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="education">
+                        <h3 class="section-title">Education</h3>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap"></i> BSc in Computer Science & Data Science (Expected 2025)</li>
+                            <li><i class="fas fa-school"></i> Stanford University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 </body>
